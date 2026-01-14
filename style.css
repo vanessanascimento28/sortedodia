@@ -1,0 +1,171 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: radial-gradient(circle at top, #1b0033, #050010);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  overflow: hidden;
+}
+
+/* Container central */
+.container {
+  text-align: center;
+  padding: 40px 30px;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 40px rgba(180, 120, 255, 0.25);
+  max-width: 400px;
+  z-index: 2;
+}
+
+.container h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.container p {
+  opacity: 0.85;
+  margin-bottom: 25px;
+}
+
+/* Botão místico */
+#btn-generate {
+  background: linear-gradient(135deg, #b36cff, #6f00ff);
+  border: none;
+  padding: 14px 28px;
+  font-size: 1rem;
+  color: white;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0 0 20px rgba(179, 108, 255, 0.6);
+  transition: all 0.3s ease;
+}
+
+#btn-generate:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 35px rgba(179, 108, 255, 0.9);
+}
+
+/* Resultado da sorte */
+#resultado {
+  margin-top: 25px;
+  font-size: 1.1rem;
+  min-height: 40px;
+}
+
+/* Luzes flutuantes */
+body::before,
+body::after {
+  content: "";
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(
+    circle,
+    rgba(180, 120, 255, 0.4),
+    transparent 70%
+  );
+  filter: blur(60px);
+  animation: float 8s infinite alternate ease-in-out;
+}
+
+body::after {
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(
+    circle,
+    rgba(255, 120, 200, 0.35),
+    transparent 70%
+  );
+  animation-duration: 12s;
+}
+
+@keyframes float {
+  from {
+    transform: translate(-100px, -80px);
+  }
+  to {
+    transform: translate(120px, 100px);
+  }
+}
+
+.crystal {
+  width: 230px;
+  height: 230px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
+  filter: drop-shadow(0 0 25px rgba(180, 120, 255, 0.8));
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(4px);
+  background: radial-gradient(
+    circle at top,
+    rgba(255, 255, 255, 0.6),
+    rgba(180, 120, 255, 0.2),
+    rgba(60, 0, 120, 0.6)
+  );
+  padding: 5px;
+}
+
+.crystal:hover {
+  animation: pulse 1.2s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.06);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+#resultado {
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+#resultado.show {
+  opacity: 1;
+}
+
+.loading {
+  margin-top: 20px;
+  font-size: 1rem;
+  opacity: 0.85;
+  animation: fade 1.5s infinite ease-in-out;
+}
+
+.hidden {
+  display: none;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.4;
+  }
+}
+
+.crystal.loading {
+  animation: pulse 0.8s infinite ease-in-out;
+}

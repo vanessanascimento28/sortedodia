@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sorte do Dia ✨</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <img
+        src="./images/crystal-ball.jpg"
+        alt="Bola de cristal mística"
+        class="crystal"
+      />
+      <h1>✨ SORTE DO DIA ✨</h1>
+
+      <p> Clique no botão e descubra </br>sua sorte de hoje:</p>
+
+      <button id="btn-generate">Quero minha sorte</button>
+
+      <p id="loading" class="loading hidden">
+  🔮 Consultando o universo...
+</p>
+
+      <div id="resultado"></div>
+    </main>
+    <audio id="mystic-sound" src="./sounds/magic-sound.mp3" preload="auto"></audio>
+    <script src="script.js"></script>
+    
+  </body>
+</html>
