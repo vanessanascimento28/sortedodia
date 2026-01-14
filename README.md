@@ -8,7 +8,7 @@ O projeto foi desenvolvido com foco em **experiência do usuário**, **boas prá
 
 ## ✨ Demonstração
 
-👉 Em breve online via GitHub Pages
+👉 Acesse o projeto https://vanessanascimento28.github.io/sortedodia/
 
 ---
 
